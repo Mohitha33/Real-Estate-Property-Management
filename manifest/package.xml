@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <!-- Custom Application -->
+    <types>
+        <members>Property_Management_System</members>
+        <name>CustomApplication</name>
+    </types>
+
+    <!-- Custom Tabs -->
+    <types>
+        <members>Property__c</members>
+        <members>Tenant__c</members>
+        <members>Lease_Agreement__c</members>
+        <members>Maintenance_Request__c</members>
+        <members>Vendor__c</members>
+        <name>CustomTab</name>
+    </types>
+
+    <!-- Custom Objects (includes fields) -->
+    <types>
+        <members>Property__c</members>
+        <members>Tenant__c</members>
+        <members>Lease_Agreement__c</members>
+        <members>Maintenance_Request__c</members>
+        <members>Vendor__c</members>
+        <name>CustomObject</name>
+    </types>
+
+    <!-- Validation Rules -->
+    <types>
+        <members>Property__c.Rent_Must_Be_Greater_Than_Zero</members>
+        <members>Property__c.Description_Required</members>
+        <name>ValidationRule</name>
+    </types>
+
+    <!-- List Views -->
+    <types>
+        <members>Property__c.All</members>
+        <members>Tenant__c.All</members>
+        <members>Lease_Agreement__c.All</members>
+        <name>ListView</name>
+    </types>
+
+    <!-- Lightning Web Components -->
+    <types>
+        <members>createProperty</members>
+        <name>LightningComponentBundle</name>
+    </types>
+
+    <version>59.0</version>
+</Package>

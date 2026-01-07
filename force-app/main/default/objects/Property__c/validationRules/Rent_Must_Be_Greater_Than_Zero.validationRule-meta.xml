@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rent_Must_Be_Greater_Than_Zero</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( ISBLANK( Rent__c ), Rent__c &lt;= 0 )</errorConditionFormula>
+    <errorDisplayField>Rent__c</errorDisplayField>
+    <errorMessage>Rent must be greater than zero</errorMessage>
+</ValidationRule>
