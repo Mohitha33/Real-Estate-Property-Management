@@ -14,7 +14,7 @@ export default class PropertyList extends LightningElement {
         {label: 'Occupied', value: 'Occupied'}
     ];
     furnishingStatusOptions = [
-        {label: 'Fully Furnished', value: 'Fully Furnished'},
+        {label: 'Furnished', value: 'Furnished'},
         {label: 'Semi Furnished', value: 'Semi-Furnished'},
         {label: 'Unfurnished', value: 'Unfurnished'}
     ];
@@ -54,7 +54,7 @@ export default class PropertyList extends LightningElement {
     }
     handleMaxPriceChange(event){
         const value = event.target.value;     
-        this.minPrice = Number(value);
+        this.maxPrice = Number(value);
     }
     handleStatusChange(event){
         this.status = event.detail.value;
