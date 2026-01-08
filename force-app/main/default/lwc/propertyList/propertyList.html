@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Properties">
+        <div class = "slds-grid slds-wrap slds-m-around_medium">
+            <div class = "slds-col slds-size_1-of-4 slds-p-right_small">
+                <lightning-input type="number" label="Min Price" value={minPrice} onchange={handleMinPriceChange}></lightning-input>
+            </div>
+            <div class = "slds-col slds-size_1-of-4 slds-p-right_small">
+                <lightning-input type="number" label="Max Price" value={maxPrice} onchange={handleMaxPriceChange}></lightning-input>
+            </div>
+            <div class = "slds-col slds-size_1-of-4 slds-p-right_small">
+                <lightning-combobox label="Status" value={status} options={statusOptions} onchange={handleStatusChange}></lightning-combobox>
+            </div>
+            <div class = "slds-col slds-size_1-of-4 slds-p-right_small">
+                <lightning-combobox label="Furnishing Status" value={furnishingStatus} options={furnishingStatusOptions} onchange={handleFurnishingStatusChange}></lightning-combobox>
+            </div>
+            <div class = "slds-col slds-size_1-of-4 slds-align_absolute-center slds-m-top_x-large">
+                <lightning-button label="Apply Filters" variant="brand" onclick={applyFilters}></lightning-button>
+            </div>
+        </div>
+        <lightning-datatable key-field="Id" data={properties} columns={columns}></lightning-datatable>
+        <div class="slds-m-around_medium slds-align_absolute-center">
+            <lightning-button label="Previous" onclick={handlePrevious} disabled={disablePrevious}></lightning-button>
+            <span class="slds-m-horizontal_medium">
+                Page {pageNumber} of {totalPages}
+            </span>
+            <lightning-button label="Next" onclick={handleNext} disabled={disableNext}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
