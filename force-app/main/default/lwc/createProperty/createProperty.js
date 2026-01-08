@@ -2,14 +2,13 @@
 import { LightningElement } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { updateRecord } from 'lightning/uiRecordApi'; 
-//import { NavigationMixin } from 'lightning/navigation';//
 
 export default class CreateProperty extends LightningElement {
     recordId;
     showFileUpload = false;
     imageUploaded = false;  
     showForm = true; 
-      
+    
     handleSuccess(event) {
         this.recordId = event.detail.id;
         this.showFileUpload = true;
@@ -43,15 +42,6 @@ export default class CreateProperty extends LightningElement {
                     variant: 'success'
             });
             this.dispatchEvent(toastEvent);
-        
-           /* this[NavigationMixin.Navigate]({
-                type: 'standard__recordPage',
-                attributes: {
-                    recordId: this.recordId,
-                    objectApiName: 'Property__c',
-                    actionName: 'view'
-                }
-            });*/
         })
         .catch(error => {
             const toastEvent = new ShowToastEvent({

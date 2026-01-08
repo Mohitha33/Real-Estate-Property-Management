@@ -17,16 +17,22 @@
             </value>
         </inputParameters>
         <inputParameters>
-            <name>useEmailTemplate</name>
+            <name>composeEmailContent</name>
             <value>
                 <stringValue>True</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
-            <name>emailTemplateId</name>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Lease End Reminder</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
             <value>
                 <inputConfiguratorMode>Custom</inputConfiguratorMode>
-                <stringValue>00XIe000000M1nFMAS</stringValue>
+                <stringValue>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium;&quot;&gt;Dear , &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium;&quot;&gt;This is a reminder that your lease agreement for the property  will end soon . Please contact us if you wish to renew or discuss furthur. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium;&quot;&gt;Thank you, &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium;&quot;&gt;Property Management Team.&lt;/span&gt;&lt;/p&gt;</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -86,9 +92,9 @@
         </filters>
         <object>Lease_Agreement__c</object>
         <schedule>
-            <frequency>Daily</frequency>
+            <frequency>Once</frequency>
             <startDate>2026-01-08</startDate>
-            <startTime>09:00:00.000Z</startTime>
+            <startTime>20:00:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
