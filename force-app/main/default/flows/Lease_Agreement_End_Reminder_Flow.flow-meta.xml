@@ -32,7 +32,7 @@
             <name>emailBody</name>
             <value>
                 <inputConfiguratorMode>Custom</inputConfiguratorMode>
-                <stringValue>&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium;&quot;&gt;Dear , &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium;&quot;&gt;This is a reminder that your lease agreement for the property  will end soon . Please contact us if you wish to renew or discuss furthur. &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium;&quot;&gt;Thank you, &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Times New Roman&amp;quot;; font-size: medium;&quot;&gt;Property Management Team.&lt;/span&gt;&lt;/p&gt;</stringValue>
+                <stringValue>&lt;p&gt;{!Body}&lt;/p&gt;</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -93,10 +93,18 @@
         <object>Lease_Agreement__c</object>
         <schedule>
             <frequency>Once</frequency>
-            <startDate>2026-01-08</startDate>
-            <startTime>20:00:00.000Z</startTime>
+            <startDate>2026-01-10</startDate>
+            <startTime>21:45:00.000Z</startTime>
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
     <status>Active</status>
+    <textTemplates>
+        <name>Body</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dear {!$Record.Tenant__r.Name}, 
+Your lease for {!$Record.Property__r.Name} ends on {!$Record.End_Date__c}. Please contact us to renew soon.
+Thank you,
+Property Management Team</text>
+    </textTemplates>
 </Flow>
